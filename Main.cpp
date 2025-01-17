@@ -141,13 +141,13 @@ void reshape(int width, int height) {
     gluPerspective(45.0, (double)width / (double)height, 0.1, 100.0);
     glMatrixMode(GL_MODELVIEW);
 }
-
+// Dùng z để zoom in, x để zoom out
 void keyboard(unsigned char key, int x, int y) {
     if (key == 'z') zoom += 0.1f;
     if (key == 'x') zoom -= 0.1f;
     glutPostRedisplay();
 }
-
+// Dùng phím mũi tên để xoay 
 void specialKeys(int key, int x, int y) {
     if (key == GLUT_KEY_UP) angleX -= 5.0f;
     if (key == GLUT_KEY_DOWN) angleX += 5.0f;
